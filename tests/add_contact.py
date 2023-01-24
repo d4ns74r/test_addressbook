@@ -11,11 +11,11 @@ def app(request):
 
 
 def test_add_contact(app):
-    app.Login(email="denisprokofyev88@gmail.com", password="Probka98")
+    app.session.Login(email="denisprokofyev88@gmail.com", password="Probka98")
     app.Add_new_contact(Contact(FirstName='Denis', LastName='Prokofyev', Street='Petrozavodskaya'))
-    app.Logout()
+    app.session.Logout()
 
 def test_add_contact_one_symbol(app):
-    app.Login(email="denisprokofyev88@gmail.com", password="Probka98")
+    app.session.Login(email="denisprokofyev88@gmail.com", password="Probka98")
     app.Add_new_contact(Contact(FirstName='D', LastName='P', Street='P'))
-    app.Logout()
+    app.session.Logout()
