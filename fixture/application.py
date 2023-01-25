@@ -8,12 +8,11 @@ class Application:
     def __init__(self):
         self.driver = webdriver.Chrome()
         self.vars = {}
-        self.driver.implicitly_wait(30)
+        self.driver.implicitly_wait(3)
         self.session = SessionHelper(self)
         self.contact = ContactHelper(self)
 
     def Open_home_page(self):
-        self.driver = webdriver.Chrome()
         self.driver.get("https://www.postable.com/login")
 
     def Destroy(self):

@@ -7,7 +7,8 @@ class SessionHelper():
 
     def Login(self, email, password):
         self.driver = self.app.driver
-        self.driver.get("https://www.postable.com/login")
+        #self.driver.get("https://www.postable.com/login")
+        self.app.Open_home_page()
         self.driver.find_element(By.NAME, "email").click()
         self.driver.find_element(By.NAME, "email").send_keys(email)
         self.driver.find_element(By.NAME, "password").click()
